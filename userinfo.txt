@@ -1,5 +1,5 @@
-name:  ΑυΊγ
+ο»Ώname:  εζ’
 email: henglau@163.com
 age:   24
 country: china
-sex:  girl
+sex:  boy
