@@ -1,6 +1,0 @@
-﻿name:  刘恒
-email: henglau@163.com
-age:   24
-country: china
-sex:  boy
-爱好: 羽毛球
