@@ -3,4 +3,8 @@ email: henglau@163.com
 age:   24
 country: china
 sex:  boy
+<<<<<<< HEAD
 爱好: 羽毛球,爬山,游泳
+=======
+爱好: 羽毛球,爬山
+>>>>>>> testing
