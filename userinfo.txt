@@ -1,0 +1,7 @@
+﻿name:  刘恒
+email: henglau@163.com
+age:   24
+country: china
+sex:  boy
+爱好: 羽毛球,爬山,游泳,篮球,乒乓球
+偶像: 刘德华,罗永浩,王自健
