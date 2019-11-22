@@ -1,0 +1,43 @@
+methods:{
+  //下载文件
+    filerightDown(index,fileName) {//index 接口参数  fileName文件名字
+      var _this = this;
+      var fileName = fileName;
+      this.$http({
+        method: "post",
+        url: this.HOST + api.download,
+        params: {
+          fileId: index
+        },
+        responseType:'arraybuffer'
+      })
+        .then(res => {
+          this.download(res.data,fileName);
+        })
+        .catch(req => {
+          console.log("下载失败", req);
+        });
+    },
+    // 下载文件
+    download (data,fileName) {
+        if (!data) {
+            return
+        }
+        let url = window.URL.createObjectURL(new Blob([data]));
+        let link = document.createElement('a');
+        link.style.display = 'none';
+        link.href = url;
+        link.setAttribute('download', fileName);
+        document.body.appendChild(link);
+        link.click();
+    },  
+}
+
+
+responseType:'arraybuffer' 
+XMLHttpRequest.responseType 属性是一个枚举类型的属性，返回响应数据的类型。它允许我们手动的设置返回数据的类型。如果我们将它设置为一个空字符串，它将使用默认的"text"类型。
+简而言之，　responseType　的作用就是设置ａｊａｘ　数据响应的类型，　你告诉服务器，让服务器返回什么样的数据类型给你;
+
+
+new Blob
+Blob 对象表示一个不可变、原始数据的类文件对象。Blob 表示的不一定是JavaScript原生格式的数据。File 接口基于Blob，继承了 blob 的功能并将其扩展使其支持用户系统上的文件。
